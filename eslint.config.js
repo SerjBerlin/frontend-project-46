@@ -17,7 +17,7 @@ export default [
     },
     rules: {
       ...js.configs.recommended.rules,
-      ...stylistic.configs['recommended-flat'].rules,
+      ...stylistic.configs['recommended'].rules,
     },
   },
 ]
