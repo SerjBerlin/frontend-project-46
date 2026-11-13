@@ -23,7 +23,8 @@ cd frontend-project-46
 ## Использование
 
 <!-- Добавьте примеры запуска и запись asciinema — именно это смотрит работодатель -->
-
+### Сравнение плоских JSON-файлов
+[![asciicast](https://asciinema.org/a/TUmEUGsngLQAtraO.svg)](https://asciinema.org/a/TUmEUGsngLQAtraO)
 ---
 
 <details>
