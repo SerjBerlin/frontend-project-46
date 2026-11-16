@@ -27,6 +27,9 @@ cd frontend-project-46
 <!-- Добавьте примеры запуска и запись asciinema — именно это смотрит работодатель -->
 ### Сравнение плоских JSON-файлов
 [![asciicast](https://asciinema.org/a/TUmEUGsngLQAtraO.svg)](https://asciinema.org/a/TUmEUGsngLQAtraO)
+
+### Сравнение плоских YAML-файлов
+[![aciicast](https://asciinema.org/a/1ZDd3GvAVkdtZgxy.svg)](https://asciinema.org/a/1ZDd3GvAVkdtZgxy)
 ---
 
 <details>
