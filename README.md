@@ -2,6 +2,8 @@
 
 [![hexlet-check](https://github.com/SerjBerlin/frontend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/SerjBerlin/frontend-project-46/actions)
 
+[![Node CI](https://github.com/SerjBerlin/frontend-project-46/actions/workflows/ci.yml/badge.svg)](https://github.com/SerjBerlin/frontend-project-46/actions/workflows/ci.yml)
+
 Узнаете, как создавать cli приложения, парсить и форматировать данные в json, yaml. Научитесь проектировать архитектуру приложений. А также писать unit-тесты.
 
 Учебный проект Хекслета: https://ru.hexlet.io/programs/frontend
