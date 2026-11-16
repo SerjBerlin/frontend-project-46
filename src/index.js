@@ -1,6 +1,6 @@
 import fs from 'fs'
 import parsing from '../src/parse.js'
-import { resolve } from 'node:path'
+import { resolve, extname } from 'node:path'
 import _ from 'lodash'
 
 const readingFile = (file) => {
@@ -8,6 +8,8 @@ const readingFile = (file) => {
   const readFile = fs.readFileSync(fullPath, 'utf8')
   return readFile
 }
+
+const endFile = file => extname(file)
 
 const buildDiff = (data1, data2) => {
   const onlyKeys1 = Object.keys(data1)
@@ -29,10 +31,12 @@ const buildDiff = (data1, data2) => {
 }
 
 const genDiff = (file1, file2) => {
+  const endOfFile1 = endFile(file1)
+  const endOfFile2 = endFile(file2)
   const newFile1 = readingFile(file1)
   const newFile2 = readingFile(file2)
-  const parsingFile1 = parsing(newFile1)
-  const parsingFile2 = parsing(newFile2)
+  const parsingFile1 = parsing(newFile1, endOfFile1)
+  const parsingFile2 = parsing(newFile2, endOfFile2)
   const arrOfKeysValues = buildDiff(parsingFile1, parsingFile2)
   return `{\n${arrOfKeysValues}\n}`
 }
