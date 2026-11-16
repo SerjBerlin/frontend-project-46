@@ -4,7 +4,7 @@ import stylistic from '@stylistic/eslint-plugin'
 
 export default [
   {
-    ignores: ['node_modules/', '*.md', 'Makefile', 'package-lock.json'],
+    ignores: ['node_modules/', '*.md', 'Makefile', 'package-lock.json', 'coverage/'],
   },
   {
     files: ['**/*.{js,mjs,cjs}'],
