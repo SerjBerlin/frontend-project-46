@@ -29,7 +29,7 @@ cd frontend-project-46
 [![asciicast](https://asciinema.org/a/TUmEUGsngLQAtraO.svg)](https://asciinema.org/a/TUmEUGsngLQAtraO)
 
 ### Сравнение плоских YAML-файлов
-[![aciicast](https://asciinema.org/a/1ZDd3GvAVkdtZgxy.svg)](https://asciinema.org/a/1ZDd3GvAVkdtZgxy)
+[![asciicast](https://asciinema.org/a/1ZDd3GvAVkdtZgxy.svg)](https://asciinema.org/a/1ZDd3GvAVkdtZgxy)
 ---
 
 <details>
