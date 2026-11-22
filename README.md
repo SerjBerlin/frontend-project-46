@@ -30,6 +30,9 @@ cd frontend-project-46
 
 ### Сравнение плоских YAML-файлов
 [![asciicast](https://asciinema.org/a/1ZDd3GvAVkdtZgxy.svg)](https://asciinema.org/a/1ZDd3GvAVkdtZgxy)
+
+### Рекурсивное сравнение JSON и YAML файлов
+[![asciicast](https://asciinema.org/a/yZ2TlJtcHbJT8iY3.svg)](https://asciinema.org/a/yZ2TlJtcHbJT8iY3)
 ---
 
 <details>
