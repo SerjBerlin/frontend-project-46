@@ -41,8 +41,8 @@ const genDiff = (file1, file2, format = 'stylish') => {
   const newFile2 = readingFile(file2)
   const parsingFile1 = parsing(newFile1, endOfFile1)
   const parsingFile2 = parsing(newFile2, endOfFile2)
-  const arrOfKeysValues = buildDiff(parsingFile1, parsingFile2)
-  return formatter(arrOfKeysValues, format)
+  const tree = buildDiff(parsingFile1, parsingFile2)
+  return formatter(tree, format)
 }
 
 export default genDiff

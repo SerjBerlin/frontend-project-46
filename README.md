@@ -24,6 +24,8 @@
 ```bash
 git clone https://github.com/SerjBerlin/frontend-project-46.git
 cd frontend-project-46
+npm ci
+npm link
 ```
 
 ## Использование
@@ -39,9 +41,9 @@ cd frontend-project-46
 [![asciicast](https://asciinema.org/a/yZ2TlJtcHbJT8iY3.svg)](https://asciinema.org/a/yZ2TlJtcHbJT8iY3)
 
 ### Плоский формат рекурсивного сравнения JSON и YAML файлов
-[![asciicast](https://asciinema.org/a/1T1iUOgjBCG8Fcwd.swg)](https://asciinema.org/a/1T1iUOgjBCG8Fcwd)
+[![asciicast](https://asciinema.org/a/1T1iUOgjBCG8Fcwd.svg)](https://asciinema.org/a/1T1iUOgjBCG8Fcwd)
 
 ### JSON формат рекурсивного сравнения JSON и YAML файлов
-[![asciicast](https://asciinema.org/a/oi3lmUt4pG9mrWXQ.swg)](https://asciinema.org/a/oi3lmUt4pG9mrWXQ)
+[![asciicast](https://asciinema.org/a/oi3lmUt4pG9mrWXQ.svg)](https://asciinema.org/a/oi3lmUt4pG9mrWXQ)
 ---
 
