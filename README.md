@@ -40,5 +40,8 @@ cd frontend-project-46
 
 ### Плоский формат рекурсивного сравнения JSON и YAML файлов
 [![asciicast](https://asciinema.org/a/1T1iUOgjBCG8Fcwd.swg)](https://asciinema.org/a/1T1iUOgjBCG8Fcwd)
+
+### JSON формат рекурсивного сравнения JSON и YAML файлов
+[![asciicast](https://asciinema.org/a/oi3lmUt4pG9mrWXQ.swg)](https://asciinema.org/a/oi3lmUt4pG9mrWXQ)
 ---
 
