@@ -4,46 +4,20 @@ import path from 'path'
 import fs from 'fs'
 
 const getFixturePath = filename => path.join(import.meta.dirname, '..', '__fixtures__', filename)
-const readFile = file => fs.readFileSync(getFixturePath(file), 'utf-8')
+const readFile = file => fs.readFileSync(getFixturePath(file), 'utf-8').trim()
 
-test ('genDiff for json with stylish', () => {
-  const file1 = getFixturePath('file1.json')
-  const file2 = getFixturePath('file2.json')
-  const result = readFile('result.txt').trim()
-  expect(genDiff(file1, file2)).toBe(result)
-})
+const extensions = ['json', 'yaml', 'yml']
+const expectedStylish = readFile('result.txt')
+const expectedPlain = readFile('resultForPlain.txt')
+const expectedJson = readFile('resultForJson.txt')
 
-test ('genDiff for yaml with stylish', () => {
-  const file1 = getFixturePath('file1.yaml')
-  const file2 = getFixturePath('file2.yaml')
-  const result = readFile('result.txt').trim()
-  expect(genDiff(file1, file2)).toBe(result)
-})
+test.each(extensions)('genDiff for %s', (ext) => {
+  const file1 = getFixturePath(`file1.${ext}`)
+  const file2 = getFixturePath(`file2.${ext}`)
 
-test ('genDiff for yml with stylish', () => {
-  const file1 = getFixturePath('file1.yml')
-  const file2 = getFixturePath('file2.yml')
-  const result = readFile('result.txt').trim()
-  expect(genDiff(file1, file2)).toBe(result)
-})
-
-test ('genDiff for json with plain', () => {
-  const file1 = getFixturePath('file1.json')
-  const file2 = getFixturePath('file2.json')
-  const result = readFile('resultForPlain.txt').trim()
-  expect(genDiff(file1, file2, 'plain')).toBe(result)
-})
-
-test ('genDiff for yaml with plain', () => {
-  const file1 = getFixturePath('file1.yaml')
-  const file2 = getFixturePath('file2.yaml')
-  const result = readFile('resultForPlain.txt').trim()
-  expect(genDiff(file1, file2, 'plain')).toBe(result)
-})
-
-test ('genDiff for yml with plain', () => {
-  const file1 = getFixturePath('file1.yml')
-  const file2 = getFixturePath('file2.yml')
-  const result = readFile('resultForPlain.txt').trim()
-  expect(genDiff(file1, file2, 'plain')).toBe(result)
+  expect(genDiff(file1, file2)).toBe(expectedStylish)
+  expect(genDiff(file1, file2, 'stylish')).toBe(expectedStylish)
+  expect(genDiff(file1, file2, 'plain')).toBe(expectedPlain)
+  expect(genDiff(file1, file2, 'json')).toBe(expectedJson)
+  expect(() => genDiff(file1, file2, 'lala')).toThrow('invalid format')
 })
