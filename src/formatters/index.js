@@ -8,11 +8,11 @@ const format = {
   json: json,
 }
 
-const formatter = (tree, form) => {
-  if (!Object.hasOwn(format, form)) {
+const formatter = (tree, formatName) => {
+  if (!Object.hasOwn(format, formatName)) {
     throw new Error ('invalid format')
   }
-  return format[form](tree)
+  return format[formatName](tree)
 }
 
 export default formatter
