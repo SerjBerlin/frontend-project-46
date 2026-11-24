@@ -20,11 +20,13 @@ const stylish = (tree) => {
         case 'deleted':
           return `${' '.repeat((depth * 4) - 2)}- ${node.key}: ${stringify(node.value, depth)}`
         case 'nested':
-          return `${' '.repeat(depth * 4)}${node.key}: {\n${iter(node.value, depth + 1)}\n${' '.repeat(depth * 4)}}`
+          return `${' '.repeat(depth * 4)}${node.key}: {\n${iter(node.children, depth + 1)}\n${' '.repeat(depth * 4)}}`
         case 'changed':
           return `${' '.repeat((depth * 4) - 2)}- ${node.key}: ${stringify(node.value1, depth)}\n${' '.repeat((depth * 4) - 2)}+ ${node.key}: ${stringify(node.value2, depth)}`
         case 'unchanged':
           return `${' '.repeat((depth * 4))}${node.key}: ${stringify(node.value, depth)}`
+        default:
+          throw new Error(`Unknown node type: ${node.type}`)
       }
     }).join('\n')
     return newTree

@@ -24,7 +24,7 @@ const buildDiff = (data1, data2) => {
       return { key, type: 'deleted', value: data1[key] }
     }
     else if (_.isPlainObject(data1[key]) && _.isPlainObject(data2[key])) {
-      return { key, type: 'nested', value: buildDiff(data1[key], data2[key]) }
+      return { key, type: 'nested', children: buildDiff(data1[key], data2[key]) }
     }
     else if (data1[key] !== data2[key]) {
       return { key, type: 'changed', value1: data1[key], value2: data2[key] }

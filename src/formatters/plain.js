@@ -24,9 +24,11 @@ const plain = (tree) => {
         case 'added':
           return `Property '${key}' was added with value: ${stringify(node.value)}`
         case 'nested':
-          return iter(node.value, key)
+          return iter(node.children, key)
         case 'unchanged':
           return null
+        default:
+          throw new Error(`Unknown node type: ${node.type}`)
       }
     })
       .filter(Boolean)
