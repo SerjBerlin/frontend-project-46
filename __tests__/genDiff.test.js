@@ -26,3 +26,24 @@ test ('genDiff for yml with stylish', () => {
   const result = readFile('result.txt').trim()
   expect(genDiff(file1, file2)).toBe(result)
 })
+
+test ('genDiff for json with plain', () => {
+  const file1 = getFixturePath('file1.json')
+  const file2 = getFixturePath('file2.json')
+  const result = readFile('resultForPlain.txt').trim()
+  expect(genDiff(file1, file2, 'plain')).toBe(result)
+})
+
+test ('genDiff for yaml with plain', () => {
+  const file1 = getFixturePath('file1.yaml')
+  const file2 = getFixturePath('file2.yaml')
+  const result = readFile('resultForPlain.txt').trim()
+  expect(genDiff(file1, file2, 'plain')).toBe(result)
+})
+
+test ('genDiff for yml with plain', () => {
+  const file1 = getFixturePath('file1.yml')
+  const file2 = getFixturePath('file2.yml')
+  const result = readFile('resultForPlain.txt').trim()
+  expect(genDiff(file1, file2, 'plain')).toBe(result)
+})
