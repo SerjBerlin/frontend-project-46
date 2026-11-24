@@ -4,10 +4,14 @@
 
 [![Node CI](https://github.com/SerjBerlin/frontend-project-46/actions/workflows/ci.yml/badge.svg)](https://github.com/SerjBerlin/frontend-project-46/actions/workflows/ci.yml)
 
-Узнаете, как создавать cli приложения, парсить и форматировать данные в json, yaml. Научитесь проектировать архитектуру приложений. А также писать unit-тесты.
+## Описание проекта
 
-Учебный проект Хекслета: https://ru.hexlet.io/programs/frontend
-Как это должно работать: https://asciinema.org/a/Pe6QypnLEmFWssNAjCOJN1iii
+«Вычислитель отличий» — программа, которая определяет разницу между двумя структурами данных. Это популярная задача, для которой существуют онлайн-сервисы вроде [jsondiff](https://jsondiff.com/); похожий механизм используется при выводе тестов и при отслеживании изменений в конфигурационных файлах.
+
+Возможности утилиты:
+
+* Поддержка разных входных форматов: YAML, JSON
+* Генерация отчёта в форматах plain text, stylish и JSON
 
 ## Стек
 
@@ -33,15 +37,8 @@ cd frontend-project-46
 
 ### Рекурсивное сравнение JSON и YAML файлов
 [![asciicast](https://asciinema.org/a/yZ2TlJtcHbJT8iY3.svg)](https://asciinema.org/a/yZ2TlJtcHbJT8iY3)
+
+### Плоский формат рекурсивного сравнения JSON и YAML файлов
+[![asciicast](https://asciinema.org/a/1T1iUOgjBCG8Fcwd.swg)](https://asciinema.org/a/1T1iUOgjBCG8Fcwd)
 ---
 
-<details>
-<summary>Автоматические тесты Хекслета</summary>
-
-Тесты запускаются на каждый коммит. За запуск отвечает файл `.github/workflows/hexlet-check.yml` — не удаляйте и не переименовывайте ни его, ни репозиторий.
-
-</details>
-
-## О Хекслете
-
-[Хекслет](https://ru.hexlet.io/) — школа программирования: авторские программы обучения с практикой, поддержкой наставников и реальными проектами, которые остаются в резюме. Этот репозиторий — один из таких проектов.
