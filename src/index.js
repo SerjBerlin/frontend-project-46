@@ -2,7 +2,7 @@ import fs from 'fs'
 import parsing from '../src/parse.js'
 import { resolve, extname } from 'node:path'
 import _ from 'lodash'
-import stylish from '../src/stylish.js'
+import formatter from '../src/formatters/index.js'
 
 const readingFile = (file) => {
   const fullPath = resolve(process.cwd(), file)
@@ -33,9 +33,7 @@ const buildDiff = (data1, data2) => {
     return { key, type: 'unchanged', value: data1[key] }
   })
 }
-const formatter = {
-  stylish: stylish,
-}
+
 const genDiff = (file1, file2, format = 'stylish') => {
   const endOfFile1 = endFile(file1)
   const endOfFile2 = endFile(file2)
@@ -44,7 +42,7 @@ const genDiff = (file1, file2, format = 'stylish') => {
   const parsingFile1 = parsing(newFile1, endOfFile1)
   const parsingFile2 = parsing(newFile2, endOfFile2)
   const arrOfKeysValues = buildDiff(parsingFile1, parsingFile2)
-  return formatter[format](arrOfKeysValues)
+  return formatter(arrOfKeysValues, format)
 }
 
 export default genDiff
