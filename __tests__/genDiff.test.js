@@ -21,3 +21,9 @@ test.each(extensions)('genDiff for %s', (ext) => {
   expect(genDiff(file1, file2, 'json')).toBe(expectedJson)
   expect(() => genDiff(file1, file2, 'lala')).toThrow('invalid format')
 })
+
+test('genDiff with unsupported extension', () => {
+  const file1 = getFixturePath('result.txt')
+  const file2 = getFixturePath('file2.json')
+  expect(() => genDiff(file1, file2)).toThrow('uncorrect format file: .txt')
+})
