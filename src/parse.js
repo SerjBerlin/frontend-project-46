@@ -1,13 +1,14 @@
 import { load } from 'js-yaml'
 
-const parsers = {
-  '.json': JSON.parse,
-  '.yml': load,
-  '.yaml': load,
-}
-
 export default function parsing(text, end) {
-  const fn = parsers[end]
-  const result = fn(text)
-  return result
+  switch (end) {
+    case '.json':
+      return JSON.parse(text)
+    case '.yml':
+      return load(text)
+    case '.yaml':
+      return load(text)
+    default:
+      throw new Error (`uncorrect format file: ${end}`)
+  }
 }
